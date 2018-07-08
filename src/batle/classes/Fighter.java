@@ -1,4 +1,4 @@
-package batle.Classes;
+package batle.classes;
 import batle.weapon.*;
 
 public abstract class Fighter  {
@@ -13,7 +13,7 @@ public abstract int getArmor();
 public abstract int getCriticalStrikeChance();
 public abstract int getEndurance();
 public abstract int getDamageResistance();
-public abstract int atack();
+public abstract int attack();
 public abstract void defence(int damage);
 
 public void choiceWeapon(Weapon weapon){

@@ -1,6 +1,6 @@
-package batle.Classes;
+package batle.classes;
 
-public class Berserker extends Fighter{
+public class Archer extends Fighter {
 
     public static int random(int min, int max) {
         return (int) (min + Math.random() * (max - min));
@@ -13,16 +13,16 @@ public class Berserker extends Fighter{
     private int armor = (int)(agility * 0.5);
     private int criticalStrikeChance = 100 /(int)(agility * 0.3);
     private int endurance = random(10, 50);
-    private int damageResistance = 100 / (int)armor;
+    private int damageResistance = 100 / armor;
 
     @Override
-    public int atack() {
+    public int attack() {
         return weapon.damage();
     }
 
     @Override
     public void defence(int damage) {
-        health -= atack();
+        health -= attack();
     }
 
     @Override
@@ -73,3 +73,4 @@ public class Berserker extends Fighter{
         this.health = health;
     }
 }
+

@@ -1,4 +1,4 @@
-package batle.Classes;
+package batle.classes;
 
 public class Warrior extends Fighter {
 
@@ -15,13 +15,13 @@ public class Warrior extends Fighter {
     private int damageResistance = 100 / (int)armor;
 
     @Override
-    public int atack() {
+    public int attack() {
         return weapon.damage();
     }
 
     @Override
     public void defence(int damage) {
-        health -= atack();
+        health -= attack();
     }
 
     @Override

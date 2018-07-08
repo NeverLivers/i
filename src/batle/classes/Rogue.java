@@ -1,6 +1,6 @@
-package batle.Classes;
+package batle.classes;
 
-public class Magician extends Fighter {
+public class Rogue extends Fighter {
 
     public static int random(int min, int max) {
         return (int) (min + Math.random() * (max - min));
@@ -16,13 +16,13 @@ public class Magician extends Fighter {
     private int damageResistance = 100 / (int)armor;
 
     @Override
-    public int atack() {
+    public int attack() {
         return weapon.damage();
     }
 
     @Override
     public void defence(int damage) {
-        health -= atack();
+        health -= attack();
     }
 
     @Override
