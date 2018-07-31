@@ -1,4 +1,4 @@
-package wek7;
+package week7;
 
 public class LinkedList<T> {
 
