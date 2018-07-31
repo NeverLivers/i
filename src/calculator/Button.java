@@ -27,7 +27,7 @@ public class Button extends JFrame {
     private JButton equals = new JButton("=");
     private JButton power = new JButton("^");
     private JButton doubleZero = new JButton("00");
-    int firstValue = 0;
+    double firstValue = 0;
     String operation = "+";
 
     private JPanel workPanel = new JPanel();
@@ -75,9 +75,12 @@ public class Button extends JFrame {
             operation = "-";
         });
         percent.addActionListener(event -> {
-            firstValue = Integer.valueOf(textField.getText());
+            firstValue = Double.valueOf(textField.getText());
             textField.setText("");
             operation = "%";
+            if ("%".equals(operation)){
+                textField.setText((firstValue / 100) + "");
+            }
         });
         power.addActionListener(event -> {
             firstValue = Integer.valueOf(textField.getText());
@@ -105,9 +108,7 @@ public class Button extends JFrame {
         if ("^".equals(operation)){
             textField.setText((Math.pow(firstValue, secondValue)) + "");
         }
-        if ("%".equals(operation)){
-            textField.setText((firstValue / 100) + "");
-        }
+
         firstValue = 0;
         operation = "+";
     });
