@@ -64,10 +64,10 @@ public class MyTree<K extends Comparable<K>, V> {
 
 
 
-    public V get(K k) {
+    public V get(K key) {
         TreeNode<K, V> x = root;
         while (x != null) {
-            int cmp = k.compareTo(x.key);
+            int cmp = key.compareTo(x.key);
             if (cmp == 0) {
                 return x.value;
             }
